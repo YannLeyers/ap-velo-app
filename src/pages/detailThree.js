@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+import grayHome from "@/img/grayHome.png";
+import whiteBike from "@/img/whiteBike.png";
+import wallet from "@/img/wallet.png";
+import settings from "@/img/settings.png";
+
 const App = () => {
   const [stations, setStations] = useState([]);
   const [currentLocation, setCurrentLocation] = useState(null);
@@ -37,19 +42,36 @@ const App = () => {
 
   return (
     <div>
-      <h1>Public Transport App</h1>
-      {selectedStations.length > 2 && ( // Check if at least three stations are available
-        <div key={selectedStations[2].id}> {/* Accessing data from the third station */}
-          <h2>{selectedStations[2].name}</h2>
-          <p>Available Places: {selectedStations[2].empty_slots}</p>
-          <p>Available Bikes: {selectedStations[2].free_bikes}</p>
-          {currentLocation && (
-            <p>
-              Distance: {calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(2)} km
-            </p>
-          )}
+      <div className='title'>Stations</div>
+      <div className='search'>
+        <div className='searchText'>Search Station...</div>
+      </div>
+
+      <div className='whiteCover'>
+        {selectedStations.length > 2 && ( // Check if at least three stations are available
+          <div key={selectedStations[2].id}> {/* Accessing data from the third station */}
+            <h2>{selectedStations[2].name}</h2>
+            <p>Available Places: {selectedStations[2].empty_slots}</p>
+            <p>Available Bikes: {selectedStations[2].free_bikes}</p>
+            {currentLocation && (
+              <p>
+                Distance: {calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(2)} km
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+
+      <div className='footer'>
+        <a href="/"> {/* Anchor tag linking to the index page */}
+          <img src={grayHome.src} alt="home" className='homeImg' />
+        </a>
+        <div className='currentMenu'>
+          <img src={whiteBike.src} alt="whiteBike" className='whiteBikeImg' />
         </div>
-      )}
+        <img src={wallet.src} alt="wallet" className='walletImg' />
+        <img src={settings.src} alt="settings" className='settingsImg' />
+      </div>
     </div>
   );
 };

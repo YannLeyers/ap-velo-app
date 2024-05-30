@@ -12,9 +12,11 @@
     font-weight: bold;
     display: flex;
     justify-content: center;
+    justify-self: center;
     margin-top: 75px;
     margin-bottom: 15px;
     color: #ffffff;
+    word-spacing: 15px;
 }
 
 .search {
@@ -56,6 +58,16 @@
     margin-bottom: 8px
 }
 
+.selectedStation{
+    font-family: 'Nobile', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #434B65;
+    margin-left: 18px;
+    padding-top: 32px;
+    margin-bottom: 8px
+}
+
 .veloStationsList {
     font-family: 'Nobile', sans-serif;
     color: #434B65;
@@ -67,7 +79,7 @@
 }
 
 .astridBox {
-    background-color: white;
+    background-color: #FCFCFD;
     width: 335px;
     height: 46px;
     display: flex;
@@ -84,7 +96,7 @@
 }
 
 .groenplaatsBox {
-    background-color: white;
+    background-color: #FCFCFD;
     width: 335px;
     height: 46px;
     display: flex;
@@ -101,7 +113,7 @@
 }
 
 .sintVincentiusBox {
-    background-color: white;
+    background-color: #FCFCFD;
     width: 335px;
     height: 46px;
     display: flex;
@@ -201,3 +213,17 @@
     width: 22px;
     opacity: 25%;
 }
+
+.arrowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .directionArrow {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+  }
+  

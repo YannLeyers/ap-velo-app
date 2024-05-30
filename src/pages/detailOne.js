@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import styles from "@/styles/Home.module.css";
+import grayHome from "@/img/grayHome.png";
+import whiteBike from "@/img/whiteBike.png";
+import wallet from "@/img/wallet.png";
+import settings from "@/img/settings.png";
 
 const App = () => {
-  const [firstStation, setFirstStation] = useState(null);
+  const [stations, setStations] = useState([]);
   const [currentLocation, setCurrentLocation] = useState(null);
 
   useEffect(() => {
@@ -10,8 +15,7 @@ const App = () => {
       try {
         const response = await fetch('http://api.citybik.es/v2/networks/velo-antwerpen');
         const data = await response.json();
-        const filteredStations = data.network.stations.filter(station => station.empty_slots > 0);
-        setFirstStation(filteredStations.length > 0 ? filteredStations[0] : null);
+        setStations(data.network.stations.filter(station => station.empty_slots > 0));
         setCurrentLocation(data.network.location);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -33,21 +37,73 @@ const App = () => {
     return R * 2 * Math.asin(Math.sqrt(a)); // Distance in km
   };
 
+  // Pick only three stations
+  const selectedStations = stations.slice(0, 3);
+
   return (
     <div>
-      <h1>Public Transport App</h1>
-      {firstStation && (
-        <div key={firstStation.id}>
-          <h2>{firstStation.name}</h2>
-          <p>Available Places: {firstStation.empty_slots}</p>
-          <p>Available Bikes: {firstStation.free_bikes}</p>
-          {currentLocation && (
-            <p>
-              Distance: {calculateDistance(currentLocation.latitude, currentLocation.longitude, firstStation.latitude, firstStation.longitude).toFixed(2)} km
-            </p>
-          )}
+      <div className='title'>Stations</div>
+      <div className='search'>
+        <div className='searchText'>Search Station...</div>
+      </div>
+
+      <div className='whiteCover'>
+        {selectedStations.length > 0 && ( // Check if at least three stations are available
+          <div key={selectedStations[0].id}> {/* Accessing data from the third station */}
+            <div className='selectedStation'>Centraal Station - Astrid</div>
+
+            <div className='stationInfo'>Station Information</div>
+
+            <div className='infoBoxes'>
+              <div className='infoBox'>
+                <div className='smallBox'>
+                  <div className=''>Available Places</div>
+                </div>
+                <div className='infoCode'>
+                  {selectedStations[2].empty_slots}
+                </div>
+              </div>
+
+              <div className='infoBox'>
+                <div className='smallBox'>
+                  <div className=''>Available Bikes</div>
+                </div>
+                <div className='infoCode'>
+                  {selectedStations[2].free_bikes}
+                </div>
+              </div>
+            </div>
+
+            <div className='stationInfo'>Journey Information</div>
+
+            <div className='infoBoxes'>
+              <div className='infoBox'>
+                <div className='smallBox'>
+                  <div className=''>Distance</div>
+                </div>
+                <div className='infoCode'>
+                  {currentLocation && (
+                    <div className='infoCode'>{calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(2)} km</div>
+                  )}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        )}
+      </div>
+
+      <div className='footer'>
+        <a href="/"> {/* Anchor tag linking to the index page */}
+          <img src={grayHome.src} alt="home" className='homeImg' />
+        </a>
+        <div className='currentMenu'>
+          <img src={whiteBike.src} alt="whiteBike" className='whiteBikeImg' />
         </div>
-      )}
+        <img src={wallet.src} alt="wallet" className='walletImg' />
+        <img src={settings.src} alt="settings" className='settingsImg' />
+      </div>
     </div>
   );
 };

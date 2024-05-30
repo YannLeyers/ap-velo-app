@@ -42,7 +42,9 @@ export default function Home() {
 
           <div className='astridBox'>
             <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
-            <div className='CentralAstrid'>Centraal Station - Astrid</div>
+            <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
+              <div className='CentralAstrid'>Centraal Station - Astrid</div>
+            </a>
             <img src={closed.src} alt="closed" className='closedImg' />
           </div>
 
