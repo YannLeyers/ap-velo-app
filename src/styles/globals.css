@@ -1,0 +1,177 @@
+:root {
+    background-color: #515DC6;
+}
+
+.body {
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Nobile', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.search {
+    background-color: white;
+    margin-bottom: 23px;
+    height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.searchText {
+    font-size: 12px;
+    font-family: 'Nobile', sans-serif;
+    font-weight: normal;
+    color: #ACBAC8;
+    margin-left: 17px;
+}
+
+.whiteCover {
+    background-color: white;
+    width: 100%;
+    height: 615px;
+    left: 0;
+    position: fixed; /* Ensures the element stays in place */
+    border-top-left-radius: 15px; /* Applies border radius to the top-left corner */
+    border-top-right-radius: 15px; /* Applies border radius to the top-right corner */
+  }
+  
+
+.shortcuts {
+    font-family: 'Nobile', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #434B65;
+    margin-left: 18px;
+    padding-top: 32px;
+    margin-bottom: 8px
+}
+
+shortcutBoxes{
+    display: grid;
+    justify-content: center;
+}
+
+.astridBox {
+    background-color: white;
+    width: 335px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ACBAC8;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-left: 18px;
+}
+
+.zeroOneImg {
+    height: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 17px;
+}
+
+.CentralAstrid {
+    font-family: 'Nobile', sans-serif;
+    font-size: 14px;
+}
+
+.heartImg {
+    height: 20px;
+    width: 22px;
+    margin-left: 71px;
+}
+
+.groenplaatsBox {
+    background-color: white;
+    width: 335px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ACBAC8;
+    border-radius: 15px;
+    margin-left: 18px;
+}
+
+.twentyImg {
+    height: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 17px;
+}
+
+.groenPlaats {
+    font-family: 'Nobile', sans-serif;
+    font-size: 14px;
+    margin-right: 71px;
+}
+
+.nearby {
+    font-family: 'Nobile', sans-serif;
+    color: #434B65;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 18px;
+    padding-top: 32px;
+    margin-bottom: 8px
+}
+
+.closedImg {
+    height: 13px;
+    width: 19px;
+    margin-left: 71px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.currentMenu {
+    height: 45px;
+    width: 45px;
+    background-color: #515DC6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(81, 93, 198, 0.75);
+  }
+
+.homeImg {
+    height: 20px;
+    width: 22px;
+}
+
+.bikeImg {
+    height: 18px;
+    width: 26px;
+}
+
+.walletImg {
+    height: 20px;
+    width: 22px;
+    opacity: 25%;
+}
+
+.settingsImg {
+    height: 22px;
+    width: 22px;
+    opacity: 25%;
+}

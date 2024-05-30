@@ -20,16 +20,18 @@ export default function Home() {
         <div className='whiteCover'>
           <div className='shortcuts'>Shortcuts</div>
 
-          <div className='astridBox'>
-            <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
-            <div className='CentralAstrid'>Centraal Station - Astrid</div>
-            <img src={heart.src} alt="heart" className='heartImg' />
-          </div>
+          <div className="shortcutBoxes">
+            <div className='astridBox'>
+              <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
+              <div className='CentralAstrid'>Centraal Station - Astrid</div>
+              <img src={heart.src} alt="heart" className='heartImg' />
+            </div>
 
-          <div className='groenplaatsBox'>
-            <img src={twenty.src} alt="twenty" className='twentyImg' />
-            <div className='groenPlaats'>Groenplaats 2</div>
-            <img src={heart.src} alt="heart" className='heartImg' />
+            <div className='groenplaatsBox'>
+              <img src={twenty.src} alt="twenty" className='twentyImg' />
+              <div className='groenPlaats'>Groenplaats 2</div>
+              <img src={heart.src} alt="heart" className='heartImg' />
+            </div>
           </div>
 
           <div className='nearby'>Nearby Velo Stations</div>
