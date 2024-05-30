@@ -22,7 +22,7 @@ export default function Home() {
 
           <div className="shortcutBoxes">
             <div className='astridBox'>
-              <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
+              <div className="number">01</div>
               <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
                 <div className='CentralAstrid'>Centraal Station - Astrid</div>
               </a>
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
 
             <div className='groenplaatsBox'>
-              <img src={twenty.src} alt="twenty" className='twentyImg' />
+              <div className="number">01</div>
               <a href="/detailTwo"> {/* Anchor tag linking to the stations page */}
                 <div className='groenPlaats'>Groenplaats 2</div>
               </a>
@@ -41,16 +41,19 @@ export default function Home() {
           <div className='veloStationsList'>Nearby Velo Stations</div>
 
           <div className='astridBox'>
-            <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
+            <div className="number">01</div>
             <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
               <div className='CentralAstrid'>Centraal Station - Astrid</div>
             </a>
-            <img src={closed.src} alt="closed" className='closedImg' />
+            <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
+            </a>
           </div>
 
           <div className='footer'>
             <div className='currentMenu'>
-              <img src={home.src} alt="home" className='homeImg' />
+              <a href="/"> {/* Anchor tag linking to the index page */}
+                <img src={home.src} alt="home" className='homeImg' />
+              </a>
             </div>
             <a href="/stations"> {/* Anchor tag linking to the stations page */}
               <img src={bike.src} alt="bike" className='bikeImg' />

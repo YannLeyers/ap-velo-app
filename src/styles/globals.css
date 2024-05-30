@@ -45,8 +45,8 @@
     position: fixed;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-  }
-  
+}
+
 
 .shortcuts {
     font-family: 'Nobile', sans-serif;
@@ -58,7 +58,7 @@
     margin-bottom: 8px
 }
 
-.selectedStation{
+.selectedStation {
     font-family: 'Nobile', sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -78,6 +78,15 @@
     margin-bottom: 8px
 }
 
+.number {
+    font-family: 'Nobile', sans-serif;
+    color: #ACBAC8;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
 .astridBox {
     background-color: #FCFCFD;
     width: 335px;
@@ -90,9 +99,22 @@
     margin-left: 18px;
 }
 
+.astridBox:hover {
+    background-color: #515DC6;
+    color: white;
+    border: 1px solid #515DC6;
+    box-shadow: 0 5px 15px rgba(81, 93, 198, 0.75);
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.astridBox:not(:hover) {
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .CentralAstrid {
     font-family: 'Nobile', sans-serif;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .groenplaatsBox {
@@ -104,6 +126,18 @@
     border: 1px solid #ACBAC8;
     border-radius: 15px;
     margin-left: 18px;
+}
+
+.groenplaatsBox:hover {
+    background-color: #515DC6;
+    color: white;
+    border: 1px solid #515DC6;
+    box-shadow: 0 5px 15px rgba(81, 93, 198, 0.75);
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.groenplaatsBox:not(:hover) {
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .groenPlaats {
@@ -123,6 +157,18 @@
     margin-bottom: 15px;
     margin-left: 18px;
     margin-top: 15px;
+}
+
+.paleisBox:hover {
+    background-color: #515DC6;
+    color: white;
+    border: 1px solid #515DC6;
+    box-shadow: 0 5px 15px rgba(81, 93, 198, 0.75);
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paleisBox:not(:hover) {
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .paleis {
@@ -145,7 +191,7 @@
     margin-right: 17px;
 }
 
-.nineThreeImg {
+.nineFourImg {
     height: 35px;
     height: 35px;
     margin-left: 5px;
@@ -185,7 +231,7 @@
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(81, 93, 198, 0.75);
-  }
+}
 
 .homeImg {
     height: 20px;
@@ -219,38 +265,38 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-  }
-  
-  .directionArrow {
+}
+
+.directionArrow {
     width: 50px;
     height: 50px;
     transition: transform 0.5s ease;
-  }
+}
 
-  .stationInfo{
+.stationInfo {
     font-size: 14px;
     font-family: 'Nobile', sans-serif;
     margin-left: 20px;
     margin-top: 23px;
     margin-bottom: 10px;
     color: black;
-  }
+}
 
-  .infoBoxes{
+.infoBoxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-  }
+}
 
-  .infoBox{
+.infoBox {
     width: 161px;
     height: 161px;
     margin-bottom: 10px;
     border: 1px solid #ACBAC8;
     border-radius: 10px;
-  }
+}
 
-  .smallBox{
+.smallBox {
     width: 161px;
     height: 37px;
     background-color: #515DC6;
@@ -259,21 +305,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .smallBoxText{
+.smallBoxText {
     color: white;
     font-family: 'Nobile', sans-serif;
     font-size: 12px;
     font-weight: bold;
-  }
+}
 
-  .infoCode{
+.infoCode {
     display: flex;
     justify-content: center;
     font-family: 'Nobile', sans-serif;
     font-size: 35px;
     font-weight: bold;
     margin-top: 37px;
-  }
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+}

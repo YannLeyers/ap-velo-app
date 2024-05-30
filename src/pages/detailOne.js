@@ -99,7 +99,9 @@ const App = () => {
           <img src={grayHome.src} alt="home" className='homeImg' />
         </a>
         <div className='currentMenu'>
-          <img src={whiteBike.src} alt="whiteBike" className='whiteBikeImg' />
+          <a href="/stations"> {/* Anchor tag linking to the stations page */}
+            <img src={whiteBike.src} alt="whiteBike" className='whiteBikeImg' />
+          </a>
         </div>
         <img src={wallet.src} alt="wallet" className='walletImg' />
         <img src={settings.src} alt="settings" className='settingsImg' />
