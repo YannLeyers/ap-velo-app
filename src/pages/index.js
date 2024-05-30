@@ -1,8 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import zeroOne from "@/img/zeroOne.png";
 import heart from "@/img/heart.png";
-import twenty from "@/img/twenty.png";
-import closed from "@/img/closed.png";
 import home from "@/img/home.png";
 import bike from "@/img/bike.png";
 import wallet from "@/img/wallet.png";
@@ -30,7 +27,7 @@ export default function Home() {
             </div>
 
             <div className='groenplaatsBox'>
-              <div className="number">01</div>
+              <div className="number">20</div>
               <a href="/detailTwo"> {/* Anchor tag linking to the stations page */}
                 <div className='groenPlaats'>Groenplaats 2</div>
               </a>

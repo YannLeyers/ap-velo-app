@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
 }
 
 .searchText {
@@ -40,7 +41,7 @@
 .whiteCover {
     background-color: white;
     width: 100%;
-    height: 615px;
+    height: 670px;
     left: 0;
     position: fixed;
     border-top-left-radius: 15px;
@@ -89,7 +90,7 @@
 
 .astridBox {
     background-color: #FCFCFD;
-    width: 335px;
+    width: 90%;
     height: 46px;
     display: flex;
     align-items: center;
@@ -119,7 +120,7 @@
 
 .groenplaatsBox {
     background-color: #FCFCFD;
-    width: 335px;
+    width: 90%;
     height: 46px;
     display: flex;
     align-items: center;
@@ -148,7 +149,7 @@
 
 .paleisBox {
     background-color: #FCFCFD;
-    width: 335px;
+    width: 90%;
     height: 46px;
     display: flex;
     align-items: center;
@@ -220,6 +221,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid #ACBAC8;
 }
 
 .currentMenu {
