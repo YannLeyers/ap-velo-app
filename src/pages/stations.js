@@ -58,10 +58,10 @@ export default function Home() {
                             <img src={closed.src} alt="closed" className='closedImg' />
                         </div>
 
-                        <div className='sintVincentiusBox'>
+                        <div className='paleisBox'>
                             <img src={nineThree.src} alt="nineThree" className='nineThreeImg' />
                             <a href="/detailThree"> {/* Anchor tag linking to the stations page */}
-                                <div className='sintVincentius'>Sint Vincentius</div>
+                                <div className='paleis'>Paleisstraat</div>
                             </a>
                             <img src={closed.src} alt="closed" className='closedImg' />
                         </div>

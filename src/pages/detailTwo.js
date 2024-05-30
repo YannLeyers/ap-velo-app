@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import styles from "@/styles/Home.module.css";
 import grayHome from "@/img/grayHome.png";
 import whiteBike from "@/img/whiteBike.png";
 import wallet from "@/img/wallet.png";
@@ -48,16 +48,48 @@ const App = () => {
       </div>
 
       <div className='whiteCover'>
-        {selectedStations.length > 1 && ( // Check if at least three stations are available
+        {selectedStations.length > 0 && ( // Check if at least three stations are available
           <div key={selectedStations[1].id}> {/* Accessing data from the third station */}
-            <h2>{selectedStations[1].name}</h2>
-            <p>Available Places: {selectedStations[2].empty_slots}</p>
-            <p>Available Bikes: {selectedStations[2].free_bikes}</p>
-            {currentLocation && (
-              <p>
-                Distance: {calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(2)} km
-              </p>
-            )}
+            <div className='selectedStation'>Groenplaats 2</div>
+
+            <div className='stationInfo'>Station Information</div>
+
+            <div className='infoBoxes'>
+              <div className='infoBox'>
+                <div className='smallBox'>
+                  <div className='smallBoxText'>Available Places</div>
+                </div>
+                <div className='infoCode'>
+                  {selectedStations[1].empty_slots}
+                </div>
+              </div>
+
+              <div className='infoBox'>
+                <div className='smallBox'>
+                  <div className='smallBoxText'>Available Bikes</div>
+                </div>
+                <div className='infoCode'>
+                  {selectedStations[1].free_bikes}
+                </div>
+              </div>
+            </div>
+
+            <div className='stationInfo'>Journey Information</div>
+
+            <div className='infoBoxes'>
+              <div className='infoBox'>
+                <div className='smallBox'>
+                  <div className='smallBoxText'>Distance</div>
+                </div>
+                <div className='infoCode'>
+                  {currentLocation && (
+                    <div className=''>{calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(1)} km</div>
+                  )}
+                </div>
+              </div>
+
+            </div>
+
           </div>
         )}
       </div>
