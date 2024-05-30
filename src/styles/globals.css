@@ -40,9 +40,9 @@
     width: 100%;
     height: 615px;
     left: 0;
-    position: fixed; /* Ensures the element stays in place */
-    border-top-left-radius: 15px; /* Applies border radius to the top-left corner */
-    border-top-right-radius: 15px; /* Applies border radius to the top-right corner */
+    position: fixed;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
   
 
@@ -56,9 +56,14 @@
     margin-bottom: 8px
 }
 
-shortcutBoxes{
-    display: grid;
-    justify-content: center;
+.veloStationsList {
+    font-family: 'Nobile', sans-serif;
+    color: #434B65;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 18px;
+    padding-top: 32px;
+    margin-bottom: 8px
 }
 
 .astridBox {
@@ -73,22 +78,9 @@ shortcutBoxes{
     margin-left: 18px;
 }
 
-.zeroOneImg {
-    height: 35px;
-    height: 35px;
-    margin-left: 5px;
-    margin-right: 17px;
-}
-
 .CentralAstrid {
     font-family: 'Nobile', sans-serif;
     font-size: 14px;
-}
-
-.heartImg {
-    height: 20px;
-    width: 22px;
-    margin-left: 71px;
 }
 
 .groenplaatsBox {
@@ -102,6 +94,38 @@ shortcutBoxes{
     margin-left: 18px;
 }
 
+.groenPlaats {
+    font-family: 'Nobile', sans-serif;
+    font-size: 14px;
+    margin-right: 71px;
+}
+
+.sintVincentiusBox {
+    background-color: white;
+    width: 335px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ACBAC8;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+
+.sintVincentius {
+    font-family: 'Nobile', sans-serif;
+    font-size: 14px;
+    margin-right: 62px;
+}
+
+.zeroOneImg {
+    height: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 17px;
+}
+
 .twentyImg {
     height: 35px;
     height: 35px;
@@ -109,25 +133,22 @@ shortcutBoxes{
     margin-right: 17px;
 }
 
-.groenPlaats {
-    font-family: 'Nobile', sans-serif;
-    font-size: 14px;
-    margin-right: 71px;
-}
-
-.nearby {
-    font-family: 'Nobile', sans-serif;
-    color: #434B65;
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 18px;
-    padding-top: 32px;
-    margin-bottom: 8px
+.nineThreeImg {
+    height: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 17px;
 }
 
 .closedImg {
     height: 13px;
     width: 19px;
+    margin-left: 71px;
+}
+
+.heartImg {
+    height: 20px;
+    width: 22px;
     margin-left: 71px;
 }
 
@@ -160,6 +181,11 @@ shortcutBoxes{
 }
 
 .bikeImg {
+    height: 18px;
+    width: 26px;
+}
+
+.whiteBikeImg {
     height: 18px;
     width: 26px;
 }

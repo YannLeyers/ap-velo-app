@@ -23,7 +23,9 @@ export default function Home() {
           <div className="shortcutBoxes">
             <div className='astridBox'>
               <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
-              <div className='CentralAstrid'>Centraal Station - Astrid</div>
+              <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
+                <div className='CentralAstrid'>Centraal Station - Astrid</div>
+              </a>
               <img src={heart.src} alt="heart" className='heartImg' />
             </div>
 
@@ -34,7 +36,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='nearby'>Nearby Velo Stations</div>
+          <div className='veloStationsList'>Nearby Velo Stations</div>
 
           <div className='astridBox'>
             <img src={zeroOne.src} alt="Zero One" className='zeroOneImg' />
@@ -46,7 +48,9 @@ export default function Home() {
             <div className='currentMenu'>
               <img src={home.src} alt="home" className='homeImg' />
             </div>
-            <img src={bike.src} alt="bike" className='bikeImg' />
+            <a href="/stations"> {/* Anchor tag linking to the stations page */}
+              <img src={bike.src} alt="bike" className='bikeImg' />
+            </a>
             <img src={wallet.src} alt="wallet" className='walletImg' />
             <img src={settings.src} alt="settings" className='settingsImg' />
           </div>
