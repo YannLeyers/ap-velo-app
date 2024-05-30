@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
-  const [firstStation, setFirstStation] = useState(null);
+  const [stations, setStations] = useState([]);
   const [currentLocation, setCurrentLocation] = useState(null);
 
   useEffect(() => {
@@ -10,8 +10,7 @@ const App = () => {
       try {
         const response = await fetch('http://api.citybik.es/v2/networks/velo-antwerpen');
         const data = await response.json();
-        const filteredStations = data.network.stations.filter(station => station.empty_slots > 0);
-        setFirstStation(filteredStations.length > 0 ? filteredStations[0] : null);
+        setStations(data.network.stations.filter(station => station.empty_slots > 0));
         setCurrentLocation(data.network.location);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -33,17 +32,20 @@ const App = () => {
     return R * 2 * Math.asin(Math.sqrt(a)); // Distance in km
   };
 
+  // Pick only three stations
+  const selectedStations = stations.slice(0, 3);
+
   return (
     <div>
       <h1>Public Transport App</h1>
-      {firstStation && (
-        <div key={firstStation.id}>
-          <h2>{firstStation.name}</h2>
-          <p>Available Places: {firstStation.empty_slots}</p>
-          <p>Available Bikes: {firstStation.free_bikes}</p>
+      {selectedStations.length > 1 && ( // Check if at least two stations are available
+        <div key={selectedStations[1].id}> {/* Accessing data from the second station */}
+          <h2>{selectedStations[1].name}</h2>
+          <p>Available Places: {selectedStations[1].empty_slots}</p>
+          <p>Available Bikes: {selectedStations[1].free_bikes}</p>
           {currentLocation && (
             <p>
-              Distance: {calculateDistance(currentLocation.latitude, currentLocation.longitude, firstStation.latitude, firstStation.longitude).toFixed(2)} km
+              Distance: {calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[1].latitude, selectedStations[1].longitude).toFixed(2)} km
             </p>
           )}
         </div>

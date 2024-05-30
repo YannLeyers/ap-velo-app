@@ -52,7 +52,9 @@ export default function Home() {
 
                         <div className='sintVincentiusBox'>
                             <img src={nineThree.src} alt="nineThree" className='nineThreeImg' />
-                            <div className='sintVincentius'>Sint Vincentius</div>
+                            <a href="/detailThree"> {/* Anchor tag linking to the stations page */}
+                                <div className='sintVincentius'>Sint Vincentius</div>
+                            </a>
                             <img src={closed.src} alt="closed" className='closedImg' />
                         </div>
 

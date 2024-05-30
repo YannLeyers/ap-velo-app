@@ -31,7 +31,9 @@ export default function Home() {
 
             <div className='groenplaatsBox'>
               <img src={twenty.src} alt="twenty" className='twentyImg' />
-              <div className='groenPlaats'>Groenplaats 2</div>
+              <a href="/detailTwo"> {/* Anchor tag linking to the stations page */}
+                <div className='groenPlaats'>Groenplaats 2</div>
+              </a>
               <img src={heart.src} alt="heart" className='heartImg' />
             </div>
           </div>
