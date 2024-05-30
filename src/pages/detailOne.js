@@ -57,19 +57,19 @@ const App = () => {
             <div className='infoBoxes'>
               <div className='infoBox'>
                 <div className='smallBox'>
-                  <div className=''>Available Places</div>
+                  <div className='smallBoxText'>Available Places</div>
                 </div>
                 <div className='infoCode'>
-                  {selectedStations[2].empty_slots}
+                  {selectedStations[0].empty_slots}
                 </div>
               </div>
 
               <div className='infoBox'>
                 <div className='smallBox'>
-                  <div className=''>Available Bikes</div>
+                  <div className='smallBoxText'>Available Bikes</div>
                 </div>
                 <div className='infoCode'>
-                  {selectedStations[2].free_bikes}
+                  {selectedStations[0].free_bikes}
                 </div>
               </div>
             </div>
@@ -79,11 +79,11 @@ const App = () => {
             <div className='infoBoxes'>
               <div className='infoBox'>
                 <div className='smallBox'>
-                  <div className=''>Distance</div>
+                  <div className='smallBoxText'>Distance</div>
                 </div>
                 <div className='infoCode'>
                   {currentLocation && (
-                    <div className='infoCode'>{calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(2)} km</div>
+                    <div className=''>{calculateDistance(currentLocation.latitude, currentLocation.longitude, selectedStations[2].latitude, selectedStations[2].longitude).toFixed(0)} km</div>
                   )}
                 </div>
               </div>

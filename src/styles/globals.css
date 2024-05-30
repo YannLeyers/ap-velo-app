@@ -226,4 +226,54 @@
     height: 50px;
     transition: transform 0.5s ease;
   }
-  
+
+  .stationInfo{
+    font-size: 14px;
+    font-family: 'Nobile', sans-serif;
+    margin-left: 20px;
+    margin-top: 23px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  .infoBoxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .infoBox{
+    width: 161px;
+    height: 161px;
+    margin-bottom: 10px;
+    border: 1px solid #ACBAC8;
+    border-radius: 10px;
+  }
+
+  .smallBox{
+    width: 161px;
+    height: 37px;
+    background-color: #515DC6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .smallBoxText{
+    color: white;
+    font-family: 'Nobile', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .infoCode{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nobile', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 37px;
+  }
+
