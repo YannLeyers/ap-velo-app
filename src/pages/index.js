@@ -1,4 +1,6 @@
 import styles from "@/styles/Home.module.css";
+import Image from 'next/image';
+import Link from 'next/link';
 import heart from "@/img/heart.png";
 import home from "@/img/home.png";
 import bike from "@/img/bike.png";
@@ -20,18 +22,22 @@ export default function Home() {
           <div className="shortcutBoxes">
             <div className='astridBox'>
               <div className="number">01</div>
-              <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
-                <div className='CentralAstrid'>Centraal Station - Astrid</div>
-              </a>
-              <img src={heart.src} alt="heart" className='heartImg' />
+              <Link legacyBehavior href="/detailOne">
+                <a>
+                  <div className='CentralAstrid'>Centraal Station - Astrid</div>
+                </a>
+              </Link>
+              <Image src={heart} alt="heart" className='heartImg' />
             </div>
 
             <div className='groenplaatsBox'>
               <div className="number">20</div>
-              <a href="/detailTwo"> {/* Anchor tag linking to the stations page */}
-                <div className='groenPlaats'>Groenplaats 2</div>
-              </a>
-              <img src={heart.src} alt="heart" className='heartImg' />
+              <Link legacyBehavior href="/detailTwo">
+                <a>
+                  <div className='groenPlaats'>Groenplaats 2</div>
+                </a>
+              </Link>
+              <Image src={heart} alt="heart" className='heartImg' />
             </div>
           </div>
 
@@ -39,24 +45,28 @@ export default function Home() {
 
           <div className='astridBox'>
             <div className="number">01</div>
-            <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
-              <div className='CentralAstrid'>Centraal Station - Astrid</div>
-            </a>
-            <a href="/detailOne"> {/* Anchor tag linking to the stations page */}
-            </a>
+            <Link legacyBehavior href="/detailOne">
+              <a>
+                <div className='CentralAstrid'>Centraal Station - Astrid</div>
+              </a>
+            </Link>
           </div>
 
           <div className='footer'>
             <div className='currentMenu'>
-              <a href="/"> {/* Anchor tag linking to the index page */}
-                <img src={home.src} alt="home" className='homeImg' />
-              </a>
+              <Link legacyBehavior href="/">
+                <a>
+                  <Image src={home} alt="home" className='homeImg' />
+                </a>
+              </Link>
             </div>
-            <a href="/stations"> {/* Anchor tag linking to the stations page */}
-              <img src={bike.src} alt="bike" className='bikeImg' />
-            </a>
-            <img src={wallet.src} alt="wallet" className='walletImg' />
-            <img src={settings.src} alt="settings" className='settingsImg' />
+            <Link legacyBehavior href="/stations">
+              <a>
+                <Image src={bike} alt="bike" className='bikeImg' />
+              </a>
+            </Link>
+            <Image src={wallet} alt="wallet" className='walletImg' />
+            <Image src={settings} alt="settings" className='settingsImg' />
           </div>
         </div>
       </main>

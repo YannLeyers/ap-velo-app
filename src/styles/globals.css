@@ -329,3 +329,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.nameHeart{
+    display: flex;
+}
+
+.hearted{
+    padding-top: 32px;
+}

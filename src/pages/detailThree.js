@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from "@/styles/Home.module.css";
+import Image from 'next/image';
+import Link from 'next/link';
 import grayHome from "@/img/grayHome.png";
 import whiteBike from "@/img/whiteBike.png";
 import wallet from "@/img/wallet.png";
@@ -13,7 +15,7 @@ const App = () => {
     // Fetch data from the City Bikes API
     const fetchData = async () => {
       try {
-        const response = await fetch('http://api.citybik.es/v2/networks/velo-antwerpen');
+        const response = await fetch('https://api.citybik.es/v2/networks/velo-antwerpen');
         const data = await response.json();
         setStations(data.network.stations.filter(station => station.empty_slots > 0));
         setCurrentLocation(data.network.location);
@@ -95,16 +97,20 @@ const App = () => {
       </div>
 
       <div className='footer'>
-        <a href="/"> {/* Anchor tag linking to the index page */}
-          <img src={grayHome.src} alt="home" className='homeImg' />
-        </a>
-        <div className='currentMenu'>
-          <a href="/stations"> {/* Anchor tag linking to the stations page */}
-            <img src={whiteBike.src} alt="whiteBike" className='whiteBikeImg' />
+        <Link legacyBehavior href="/">
+          <a>
+            <Image src={grayHome} alt="home" className='homeImg' />
           </a>
+        </Link>
+        <div className='currentMenu'>
+          <Link legacyBehavior href="/stations">
+            <a>
+              <Image src={whiteBike} alt="whiteBike" className='whiteBikeImg' />
+            </a>
+          </Link>
         </div>
-        <img src={wallet.src} alt="wallet" className='walletImg' />
-        <img src={settings.src} alt="settings" className='settingsImg' />
+        <Image src={wallet} alt="wallet" className='walletImg' />
+        <Image src={settings} alt="settings" className='settingsImg' />
       </div>
     </div>
   );
