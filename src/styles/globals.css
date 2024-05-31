@@ -1,6 +1,5 @@
 :root {
     background-color: #515DC6;
-    overflow: hidden;
 }
 
 .title {
@@ -10,7 +9,7 @@
     display: flex;
     justify-content: center;
     justify-self: center;
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 15px;
     color: #ffffff;
     word-spacing: 15px;
@@ -39,6 +38,7 @@
     background-color: white;
     width: 100%;
     height: 670px;
+    left: 0;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
