@@ -6,7 +6,6 @@ import grayHome from "@/img/grayHome.png";
 import whiteBike from "@/img/whiteBike.png";
 import wallet from "@/img/wallet.png";
 import settings from "@/img/settings.png";
-import heart from "@/img/heart.png";
 
 const App = () => {
   const [stations, setStations] = useState([]);
@@ -52,11 +51,8 @@ const App = () => {
 
       <div className='whiteCover'>
         {selectedStations.length > 0 && ( // Check if at least three stations are available
-          <div key={selectedStations[0].id}> {/* Accessing data from the third station */}
-            <div className='nameHeart'>
-              <div className='selectedStation'>Centraal Station - Astrid</div>
-              <div className='hearted'><img src={heart.src} alt="heart" className='heartImg' /></div>
-            </div>
+          <div key={selectedStations[1].id}> {/* Accessing data from the third station */}
+            <div className='selectedStation'>Centraal Station - Astrid</div>
 
             <div className='stationInfo'>Station Information</div>
 
